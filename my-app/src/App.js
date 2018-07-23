@@ -34,9 +34,10 @@ class App extends Component {
 
   updateCurrentData = (loc) => {
     if (loc) {
-      fetch(`http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${loc}/.json`)
+      fetch(`http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/hourly10day/q/${loc}/.json`)
       .then(response => response.json())
       .then(data => {
+        console.log(data);
         let weatherDataObj = returnWeatherData(data);
         this.setStorageLocation('savedLoc', data.current_observation.display_location.zip);
         this.setState({
