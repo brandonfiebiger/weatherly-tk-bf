@@ -4,6 +4,7 @@ import Card from './Card.js';
 import './SevenHour.css';
 
 const SevenHour = (props) => {
+  console.log(hourlyArray)
   let hourlyArray = props.hourlyArray.slice(0, -233);
 
   return (

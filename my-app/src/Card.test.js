@@ -24,4 +24,11 @@ describe('Card', () => {
     expect(wrapper.find('img').length).toEqual(1);
   })
 
+  it('should display a twenty-four hour forecast when a tenday card is clicked', () => {
+    wrapper.simulate('click');
+    wrapper.setState({
+      hours: true
+    })
+    expect(wrapper.state().hours).toEqual(true)
+  })
 })

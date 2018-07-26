@@ -43,8 +43,6 @@ describe( 'App', () => {
 
     localStorage.setItem('savedLoc', zip);
     let localItem = localStorage.getItem('savedLoc');
-  console.log(localItem)
-    // wrapper = mount(<App />)
       wrapper.setState({
       selectedLocation: localItem
     })
